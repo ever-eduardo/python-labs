@@ -52,16 +52,14 @@ class LinkedList:
         :param data: Any
         :return: None
         """
-        if self.tail is None and self.head is None:
-            node = Node(data)
+        node = Node(data)
+        if self.is_empty():
             self.head = node
             self.tail = node
-            self.size += 1
         else:
-            node = Node(data)
             node.next = self.head
             self.head = node
-            self.size += 1
+        self.size += 1
 
     def push_back(self, data):
         """
@@ -69,3 +67,27 @@ class LinkedList:
         :param data: Any
         :return: None
         """
+        node = Node(data)
+        if self.is_empty():
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next = node
+            self.tail = node
+        self.size += 1
+
+    def pop_first(self):
+        """
+        :return: The data of the first node of the list or None if the list is empty.
+        """
+        if self.is_empty():
+            return None
+        node = self.head
+        data = node.data
+        self.head = self.head.next
+        self.size -= 1
+        if self.is_empty():
+            self.tail = None
+        node.next = None
+        return data
+
