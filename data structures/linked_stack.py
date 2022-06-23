@@ -1,5 +1,5 @@
 #
-# Stack ADT
+# Linked Stack LIFO ADT
 # Singly List Implementation.
 #
 
