@@ -86,3 +86,12 @@ class CircularQueue:
         current_head.next = None
         self.size -= 1
         return data
+
+    def rotate(self):
+        """
+        Translates the front element to the back of the Queue.
+        :return: None
+        """
+        if self.size > 0:
+            self.tail = self.tail.next
+    
