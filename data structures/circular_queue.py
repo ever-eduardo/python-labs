@@ -27,7 +27,7 @@ class CircularQueue:
 
     def __init__(self):
         """
-        Initializas an empty Queue.
+        Initializes an empty Queue.
         """
         self.tail = None
         self.size = 0
