@@ -36,3 +36,9 @@ class DoublyLinkedList:
         self.header.next = self.trailer
         self.trailer.prev = self.header
         self.size = 0
+
+    def __len__(self):
+        return self.size
+
+    def is_empty(self):
+        return self.size == 0
