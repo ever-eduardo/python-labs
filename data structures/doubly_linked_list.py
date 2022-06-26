@@ -21,3 +21,18 @@ class Node:
         self.data = data
         self.prev = prev
         self.next = next_node
+
+
+class DoublyLinkedList:
+    """
+    A Doubly Linked List Implementation.
+    """
+    def __init__(self):
+        """
+        Creates an empty list.
+        """
+        self.header = Node(None, None, None)
+        self.trailer = Node(None, None, None)
+        self.header.next = self.trailer
+        self.trailer.prev = self.header
+        self.size = 0
