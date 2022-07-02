@@ -43,3 +43,22 @@ class LinkedDequeue:
 
     def is_empty(self):
         return self.size == 0
+
+    def first(self):
+        """
+        Peeks on the first element at the front of the queue.
+        Raises an exception when the queue is empty.
+        """
+        if self.is_empty():
+            raise Exception("Attempting to peek on an empty queue")
+        return self.header.next.data
+
+    def last(self):
+        """
+        Peeks on the first element at the back of the queue.
+        Raises an exception when the queue is empty.
+        """
+        if self.is_empty():
+            raise Exception("Attempting to peek on an empty queue")
+        return self.trailer.next.data
+    
