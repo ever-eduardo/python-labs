@@ -60,5 +60,4 @@ class LinkedDequeue:
         """
         if self.is_empty():
             raise Exception("Attempting to peek on an empty queue")
-        return self.trailer.next.data
-    
+        return self.trailer.prev.data
