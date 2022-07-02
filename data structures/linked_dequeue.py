@@ -102,3 +102,23 @@ class LinkedDequeue:
         Adds an element to the back of the queue.
         """
         self.insert_between(data, self.trailer.prev, self.trailer)
+
+    def delete_first(self):
+        """
+        Removes the first node of the dequeue.
+        Returns the data of the first node.
+        Raises an exception when the dequeue is empty.
+        """
+        if self.is_empty():
+            raise Exception("Attempting to delete from an empty dequeue")
+        return self.delete_node(self.header.next)
+
+    def delete_last(self):
+        """
+        Removes the last node of the dequeue.
+        Returns the data of the last node.
+        Raises an exception when the dequeue is empty.
+        """
+        if self.is_empty():
+            raise Exception("Attempting to delete from an empty dequeue")
+        return self.delete_node(self.trailer.prev)
