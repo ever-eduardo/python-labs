@@ -61,3 +61,32 @@ class LinkedDequeue:
         if self.is_empty():
             raise Exception("Attempting to peek on an empty queue")
         return self.trailer.prev.data
+
+    def insert_between(self, data, predecessor, successor):
+        """
+        Inserts a new node between two existing ones.
+        :param data: Any
+        :param predecessor: Node
+        :param successor: Node
+        :return: The new node.
+        """
+        node = Node(data, predecessor, successor)
+        predecessor.next = node
+        successor.prev = node
+        self.size += 1
+        return node
+
+    def delete_node(self, node):
+        """
+        Deletes a node from the list.
+        :param node: Node
+        :return: The data contained in the param node.
+        """
+        predecessor = node.prev
+        successor = node.next
+        predecessor.next = successor
+        successor.prev = predecessor
+        self.size -= 1
+        data = node.data
+        node.prev = node.next = node.data = None
+        return data
