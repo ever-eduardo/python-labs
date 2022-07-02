@@ -90,3 +90,15 @@ class LinkedDequeue:
         data = node.data
         node.prev = node.next = node.data = None
         return data
+
+    def insert_first(self, data):
+        """
+        Adds an element to the front of the queue.
+        """
+        self.insert_between(data, self.header, self.header.next)
+
+    def insert_last(self, data):
+        """
+        Adds an element to the back of the queue.
+        """
+        self.insert_between(data, self.trailer.prev, self.trailer)
