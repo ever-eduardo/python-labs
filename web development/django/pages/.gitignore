@@ -1,0 +1,4 @@
+.venv/
+*.sqlite3
+pages/__pycache__
+project/__pycache__
