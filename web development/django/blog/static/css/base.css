@@ -5,30 +5,30 @@ body {
 
 header {
     border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     display: flex;
 }
 
 header h1 a {
-    color: red;
+    color: orangered;
     text-decoration: none;
 }
 
 .post-entry {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
-.post-entry h2 {
-    margin: 0.5rem 0;
+.post-entry h2 a {
+    margin: 0.7rem 0;
 }
 
-.post-entry h2:hover {
-    color: red;
+.post-entry a:hover h2:hover {
+    color: blueviolet;
 }
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-    color: blue;
+    color: blueviolet;
     text-decoration: none;
 }
 
