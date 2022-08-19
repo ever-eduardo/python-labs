@@ -8,6 +8,8 @@ from flask import Flask
 app = Flask(__name__)
 
 
+# This way is created a route or view
+# A route maps a URL to a function handler in this case
 @app.route("/")
 def index():
     return "<h1>Hello, Flask!</h1>"
